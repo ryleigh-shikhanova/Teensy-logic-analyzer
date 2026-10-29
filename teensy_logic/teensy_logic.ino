@@ -1,3 +1,10 @@
+//GPIO registers for fast reading of the bus traces
+//Each clock cycle lasts 5ns so reading the entire bus
+//takes 15ns. 
+uint32_t reg6 = GPIO6_DR;
+uint32_t reg7 = GPIO7_DR;
+uint32_t reg9 = GPIO9_DR;
+
 struct Bus8080 {
     uint8_t address[16];
     uint8_t data[8];
@@ -12,6 +19,7 @@ struct Bus8080 {
     uint8_t int_;
 };
 
+//these values map to the 32 bit word formed by reading the gpio registers
 constexpr Bus8080 cpu = {
     .address = {
         0, 1, 2, 3, 4, 5, 6, 7,
