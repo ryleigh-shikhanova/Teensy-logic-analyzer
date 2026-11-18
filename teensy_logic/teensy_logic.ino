@@ -34,7 +34,7 @@ enum GPIO6_PIN_MAPPING : uint8_t {
 
 //reads b0_00-b0_12 from the returned GPIO7 PSR
 enum GPIO7_PIN_MAPPING : uint8_t {
-    BIT_20 = 10,
+    BIT_20 = 10, /b0_00
     BIT_21 = 12,
     BIT_22 = 11,
     BIT_23 = 13,
@@ -46,7 +46,7 @@ enum GPIO7_PIN_MAPPING : uint8_t {
     BIT_29 = 45,
     BIT_30 = 6,
     BIT_31 = 9,
-    BIT_32 = 32,
+    BIT_32 = 32, /b0_12
 };
 
 uint32_t readGPIO(GPIO_REG gpio) {
